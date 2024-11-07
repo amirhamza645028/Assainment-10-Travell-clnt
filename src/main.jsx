@@ -22,6 +22,8 @@ import UpdateProfile from './components/Pages/UpdateProfile.jsx';
 import AllTravelsSports from './components/Pages/AllTravelsSports.jsx';
 import AddTreavelsSpot from './components/Pages/AddTreavelsSpot.jsx';
 import MylistIs from './components/Pages/MylistIs.jsx';
+import UpdateDetails from './components/Pages/UpdateDetails.jsx';
+import SportsDetails from './components/Pages/SportsDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -92,13 +94,13 @@ const router = createBrowserRouter([
         path: "/update/:id",
         loader: ({ params }) =>
           fetch(`https://knowtheplace-server.vercel.app/singleSpot/${params.id}`),
-        element: <UpdateDeatils></UpdateDeatils>,
+        element: <UpdateDetails></UpdateDetails>,
       },
       {
         path: "/details/:id",
         element: (
           <PrivateRoute>
-            <SpotDetails></SpotDetails>
+            <SportsDetails></SportsDetails>
           </PrivateRoute>
         ),
       },
