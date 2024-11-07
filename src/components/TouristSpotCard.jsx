@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import { Link } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
+import PropTypes from 'prop-types';
 
 
 const customIcon = new L.Icon({
@@ -69,3 +70,6 @@ const TouristSpotCard = ({ itemSpot }) => {
 };
 
 export default TouristSpotCard;
+TouristSpotCard.propTypes = {
+    itemSpot: PropTypes.node
+}
